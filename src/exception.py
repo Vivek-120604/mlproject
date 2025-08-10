@@ -1,5 +1,5 @@
 import sys  #Python provides various fnctions and variables that are used to manipulate different parts of the python runtime environment
-
+from src.logger import logging  #Importing the logging module from the src.logger file to handle logging in the application
 
 
 
@@ -20,3 +20,12 @@ class CustomException(Exception):
 
     def __str__(self):
         return self.error_message    
+    
+
+
+    if __name__ == "__main__":
+        try:
+            a = 1/0
+        except Exception as e:
+            logging.info("Divide by zero error")
+            raise CustomException(e, sys) from e
