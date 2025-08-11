@@ -3,4 +3,9 @@ seaborn
 matplotlib
 numpy
 dill
+catboost
+scikit-learn
+Adaboost
+xgboost
+
 # -e .
